@@ -1,3 +1,207 @@
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("../fonts/ProximaNova-Semibold.eot");
+  src: url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Finlandica";
+  src: local("Finlandica Regular"), local("Finlandica-Regular"), url("../fonts/Finlandica-Regular.woff2") format("woff2"), url("../fonts/Finlandica-Regular.woff") format("woff"), url("../fonts/Finlandica-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Finlandica";
+  src: local("Finlandica Bold"), local("Finlandica-Bold"), url("../fonts/Finlandica-Bold.woff2") format("woff2"), url("../fonts/Finlandica-Bold.woff") format("woff"), url("../fonts/Finlandica-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+body {
+  font-family: "Finlandica", sans-serif;
+  color: #22211B;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px 8px #1C353F;
+}
+.navbar-wrapper {
+  display: flex;
+  align-items: flex-end;
+  min-width: 80px;
+  padding: 10px;
+}
+.navbar-logo {
+  display: flex;
+}
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 20px;
+  padding: 0;
+  flex-grow: 1;
+  font-size: 21px;
+}
+.navbar-menu li {
+  margin-right: 10px;
+}
+.navbar-menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 0px 10px;
+  letter-spacing: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s;
+  max-width: 160px;
+  line-height: 25px;
+  color: #22211B;
+}
+.navbar-menu li a:hover, .navbar-menu li a:active {
+  letter-spacing: 3px;
+}
+.navbar-menu li a:after, .navbar-menu li a:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid rgba(254, 177, 41, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+.navbar-menu li a:hover:after, .navbar-menu li a:hover:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-color: #FEB129;
+  transition: width 350ms ease-in-out;
+  width: 80%;
+}
+.navbar-menu li a:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 80%;
+}
+.navbar-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 20px;
+  align-items: flex-end;
+}
+.navbar-contacts a {
+  text-decoration: none;
+  color: #1c1c1c;
+  font-family: "Finlandica", sans-serif;
+  font-weight: bold;
+}
+.navbar-btn {
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 5px;
+  box-shadow: inset 0 0 20px rgba(254, 177, 41, 0);
+  outline: 1px solid;
+  outline-color: rgba(254, 177, 41, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.navbar-btn:hover {
+  border: 1px solid #FEB129;
+  box-shadow: inset 0 0 20px rgba(254, 177, 41, 0.5), 0 0 20px rgba(254, 177, 41, 0.2);
+  outline-color: rgba(254, 177, 41, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px rgb(254, 177, 41);
+}
+
+@media (max-width: 980px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+.logo-img {
+  width: 90px;
+  height: 80px;
+  background: url("../img/logo-shstroj.png") no-repeat 50%;
+  background-size: 100%;
+  margin-right: 10px;
+}
+.logo-text {
+  align-self: flex-end;
+  font-size: 16px;
+  font-family: "Finlandica", sans-serif;
+  font-weight: bold;
+}
+
+.slider {
+  background: url("../img/background.png") no-repeat center;
+  background-size: cover;
+  padding-top: 210px;
+  padding-bottom: 170px;
+}
+.slider-block {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  margin-left: auto;
+  box-shadow: 0 0 10px 8px #1C353F;
+  border-radius: 20px;
+  text-align: center;
+}
+.slider-block h1 {
+  font-size: 24px;
+  color: #1C353F;
+}
+.slider-block input {
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 5px;
+  width: 80%;
+}
+.slider-block button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.services {
+  margin-top: -20px;
+  padding: 10px;
+  background-color: #fff;
+}
+.services h2 {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
