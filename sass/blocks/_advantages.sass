@@ -1,0 +1,50 @@
+.advantages
+    // box-shadow: 0 0 8px 8px $text-color-alt
+    margin-top: -20px
+    padding: 10px
+    background-color: #fff
+    h2
+        text-align: center
+        text-transform: uppercase
+        font-size: 2em
+    &-wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &-item
+        flex: 1 0 21%
+        margin: 30px 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+.advantages .item
+    &-icon
+        width: 64px
+        height: 64px
+        margin-bottom: 10px
+        transition: all 0.3s ease
+    &-icon:hover
+        transform: scale(1.2)
+    &-title
+        font-size: 1.4em
+        text-align: center
+    &-icon.calendar
+        background: url('../img/advantages/calendar.png') no-repeat 50%/100%
+    &-icon.guarantee
+        background: url('../img/advantages/guarantee.png') no-repeat 50%/100%
+    &-icon.offer
+        background: url('../img/advantages/offer.png') no-repeat 50%/100%
+    &-icon.prepayment
+        background: url('../img/advantages/prepayment.png') no-repeat 50%/100%
+    &-icon.satisfaction
+        background: url('../img/advantages/satisfaction.png') no-repeat 50%/100%
+    &-icon.professional
+        background: url('../img/advantages/professional.png') no-repeat 50%/100%
+    &-icon.worker
+        background: url('../img/advantages/worker.png') no-repeat 50%/100%
+    &-icon.excavator
+        background: url('../img/advantages/excavator.png') no-repeat 50%/100%
+
+@media screen and (max-width: 800px)
+    .advantages-item
+        flex: 1 0 45%

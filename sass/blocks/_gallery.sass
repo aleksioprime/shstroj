@@ -1,0 +1,83 @@
+.gallery
+    // box-shadow: 0 0 8px 8px $text-color-alt
+    padding: 10px
+    background-color: #FEB129
+    h2
+        text-align: center
+        text-transform: uppercase
+        font-size: 2em
+    &-wrapper
+        display: flex
+        flex-direction: column
+    &-slides
+        .slide
+            position: relative
+            // box-sizing: border-box
+            // border: 10px solid #22211B
+            &-text
+                position: absolute
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 100%
+                bottom: 0
+                background: rgba(#22211B, 0.9)
+                color: #fff
+                font-size: 1.2em
+                padding: 10px
+            &-image
+                width: 100%
+                border-radius: 10px
+            &-right, &-left
+                position: absolute
+                width: 50px
+                height: 100%
+                top: 0
+                cursor: pointer
+                transition: all 0.3s
+            &-right
+                right: 10px
+                background: url('../img/slide-right.png') no-repeat 50% 45% / 100%
+                &:hover
+                    transform: scale(1.2) translateX(10px)
+            &-left
+                left: 10px
+                background: url('../img/slide-left.png') no-repeat 50% 45% / 100%
+                &:hover
+                    transform: scale(1.2) translateX(-10px)
+    &-thumbnail
+        display: flex
+        flex-wrap: nowrap
+        overflow-x: auto
+        margin: 10px 0
+        &::-webkit-scrollbar
+            width: 12px
+        &::-webkit-scrollbar-track
+            background-color: #FEB129
+        &::-webkit-scrollbar-thumb
+            background-color: #22211B
+            border-radius: 20px
+        .thumbnail
+            &-item
+                margin-bottom: 10px
+                cursor: pointer
+                overflow: hidden
+                flex: 1 0 25%
+                height: 200px
+                display: flex
+                img                 
+                    transition: all 0.3s
+                img:hover
+                    transform: scale(1.1)
+            &-item:not(:last-of-type)
+                margin-right: 10px
+        .active
+            border: 2px solid #22211B
+                
+
+@media (max-width: 640px)
+    .thumbnail-item
+        flex: 1 0 20%
+        height: 100px !important
+    .gallery-thumbnail::-webkit-scrollbar
+        width: 10px

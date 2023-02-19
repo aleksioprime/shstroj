@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>СХ-Строй Плюс - Аренда спецтехники и строительные работы</title>
+  <script src="//code.jivo.ru/widget/Mo0a8KVakb" async></script>
 </head>
 
 <body>
@@ -17,40 +18,481 @@
         <div class="navbar-wrapper">
           <div class="navbar-logo">
             <div class="logo-img"></div>
-            <!-- <span class="logo-text">Аренда спецтехники<br>Строительные работы</span> -->
           </div>
-          <ul class="navbar-menu">
-            <li><a href="#">О нас</a></li>
+          <ul class="navbar-menu" id="menu">
             <li><a href="#">Услуги</a></li>
-            <li><a href="#">Работы</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Отзывы</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
           <div class="navbar-contacts">
-            <a class="contact-email" href="#">info@sh-stroj.ru</a>
-            <a class="contact-phone" href="#">+7 499 992-78-75</a>
+            <div class="contact-item">
+              <div class="email-logo"></div>
+              <a href="mailto:info@sh-stroj.ru">info@sh-stroj.ru</a>
+            </div>
+            <div class="contact-item">
+              <div class="phone-logo"></div>
+              <a href="#">+7 499 992-78-75</a>
+            </div>
           </div>
-          <button class="navbar-btn">Обратный звонок</button>
+          <a href="javascript:void(0)" class="navbar-menu-button" onclick="showMenu()"></a>
+          <!-- <button class="navbar-btn">Обратный звонок</button> -->
         </div>
       </div>
     </nav>
     <div class="slider">
       <div class="container">
-        <div class="slider-block">
-          <h1>Хотите скидку 10%?</h1>
-          <p>Оставьте заявку на обратный звонок<br>и мы с вами свяжемся</p>
-          <input type="text" placeholder="Ваше имя">
-          <input type="text" placeholder="Номер телефона">
-          <button>Оставить заявку</button>
+        <div class="slider-wrapper">
+          <div class="slider-title">
+            <span>Асфальтирование и благоустройство территорий</span><br>
+            <span>Монтаж свайных фундаментов</span>
+          </div>
+          <div class="slider-text">
+            <p><span>Оставьте заявку на обратный звонок<br>и мы с вами свяжемся</span></p>
+            <button class="text-btn">Обратный звонок</button>
+          </div>
         </div>
       </div>
     </div>
   </header>
-  <section class="services">
+  <section class="advantages">
     <div class="container">
-      <h2>Наши услуги</h2>
-      <div>Описание услуг</div>
+      <h2>Какие у нас преимущества?</h2>
+      <div class="advantages-wrapper">
+        <div class="advantages-item">
+          <div class="item-icon calendar"></div>
+          <div class="item-title">На рынке с <strong>2015 года</strong></div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon guarantee"></div>
+          <div class="item-title"><strong>Гарантийные</strong> обязательства</div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon offer"></div>
+          <div class="item-title"><strong>Гибкое</strong> ценообразование</div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon prepayment"></div>
+          <div class="item-title">Работаем <strong>без предоплаты</strong></div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon satisfaction"></div>
+          <div class="item-title">Используем только <strong>качественные материалы</strong></div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon professional"></div>
+          <div class="item-title"><strong>Профессиональный</strong> персонал</div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon worker"></div>
+          <div class="item-title">Наличие <strong>собственного ИТР</strong></div>
+        </div>
+        <div class="advantages-item">
+          <div class="item-icon excavator"></div>
+          <div class="item-title"><strong>Надежная</strong> спецтехника</div>
+        </div>
+      </div>
     </div>
   </section>
+  <section class="services">
+    <div class="container">
+      <h2>Мы предлагаем следующие услуги</h2>
+      <h3>Благоустройство территории</h3>
+      <div class="services-wrapper">
+        <div class="service-right" onclick="sRight(this)"></div>
+        <div class="service-left" onclick="sLeft(this)"></div>
+        <div class="services-items">
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-title">Укладка тротуарной плитки</div>
+            <div class="card-overlay"></div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Установка бортового камня</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Разметка дорог и площадок</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Асфальтирование площадок</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Ремонт дорог</h3>
+      <div class="services-wrapper">
+        <div class="service-right" onclick="sRight(this)"></div>
+        <div class="service-left" onclick="sLeft(this)"></div>
+        <div class="services-items">
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-title">Капитальный ремонт дорог</div>
+            <div class="card-overlay"></div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Асфальтирование дорог и тротуаров</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Установка бортового камня</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Бетонные работы</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Разметка дорог и площадок</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Монтаж свайных фундаментов</h3>
+      <div class="services-wrapper">
+        <div class="service-right" onclick="sRight(this)"></div>
+        <div class="service-left" onclick="sLeft(this)"></div>
+        <div class="services-items">
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-title">Подготовка строительной площадки</div>
+            <div class="card-overlay"></div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Монтаж забивных ЖБ свай</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Монтаж буро-набивных свай</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Монтаж винтовых свай</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Земляные работы</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Бетонные работы</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Земляные работы</h3>
+      <div class="services-wrapper">
+        <div class="service-right" onclick="sRight(this)"></div>
+        <div class="service-left" onclick="sLeft(this)"></div>
+        <div class="services-items"> 
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-title">Разработка котлована</div>
+            <div class="card-overlay"></div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Подготовка строительной площадки</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Бетонные работы</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/services/services-test.jpg" alt="">
+            <div class="card-overlay"></div>
+            <div class="card-title">Аренда строительной техники</div>
+            <div class="card-button">
+              <a href="">Прайс</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services-content">
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container">
+      <h2>О нас</h2>
+      <div class="about-content">
+        <div class="about-content-text">
+          <p>
+            Компания ООО «СХ-СТРОЙ ПЛЮС», вышедшая на строительный рынок Москвы и Московской области 8 лет назад,
+            специализируется на дорожном строительстве и ремонте. Располагая собственным парком спецтехники и достаточным трудовым
+            ресурсом, ООО «СХ-СТРОЙ ПЛЮС» занимается дорожными и строительными работами любой сложности. Наши специалисты прекрасно
+            ориентируются в действующих ГОСТ, СНиП и прочих нормативах, что гарантирует высокое качество уложенного нами дорожного
+            полотна.
+          </p>
+          <p>
+            Стать нашими клиентами могут не только юридические лица. Мы готовы заняться обустройством придомовых территорий жилых
+            комплексов, дачных участков и загородных коттеджей.
+          </p>
+          <p>
+            Каждому клиенту ООО «СХ-СТРОЙ ПЛЮС» компания готова предложить индивидуальный план выполнения работ, прозрачную схему
+            расчётов, двухсторонний договор на строительство или ремонт дорог. Мы гарантируем оперативность при выполнении
+            поставленных вами задач и несём полную ответственность за качество услуг.
+          </p>
+        </div>
+        <div class="about-content-photo">
+          <video src="../img/video/about-us.mp4" autoplay muted loop></video>
+          <!-- <img src="../img/techno.png" alt="" width="300px" height=""> -->
+        </div>
+        <div class="about-documents"></div>
+      </div>
+    </div>
+  </section>
+  <section class="gallery">
+    <div class="container">
+      <h2>Галерея наших работ</h2>
+      <div class="gallery-wrapper">
+        <div class="gallery-slides">
+          <div class="slide">
+            <div class="slide-right" onclick="nextSlide(1)"></div>
+            <div class="slide-left" onclick="nextSlide(-1)"></div>
+            <img src="/img/gallery/test-gallery.jpg" alt="" class="slide-image">
+            <img src="/img/gallery/test-gallery.jpg" alt="" class="slide-image">
+            <img src="/img/gallery/test-gallery.jpg" alt="" class="slide-image">
+            <img src="/img/gallery/test-gallery.jpg" alt="" class="slide-image">
+            <img src="/img/gallery/test-gallery.jpg" alt="" class="slide-image">
+            <img src="/img/gallery/test-gallery.jpg" alt="" class="slide-image">
+            <div class="slide-text">Описание фотографии</div>
+          </div>
+        </div>
+        <div class="gallery-thumbnail">
+          <div class="thumbnail-item">
+            <img src="/img/gallery/test-gallery-thumbnail.jpg" alt="" onclick="currentSlide(1)">
+          </div>
+          <div class="thumbnail-item">
+            <img src="/img/gallery/test-gallery-thumbnail.jpg" alt="" onclick="currentSlide(2)">
+          </div>
+          <div class="thumbnail-item">
+            <img src="/img/gallery/test-gallery-thumbnail.jpg" alt="" onclick="currentSlide(3)">
+          </div>
+          <div class="thumbnail-item">
+            <img src="/img/gallery/test-gallery-thumbnail.jpg" alt="" onclick="currentSlide(4)">
+          </div>
+          <div class="thumbnail-item">
+            <img src="/img/gallery/test-gallery-thumbnail.jpg" alt="" onclick="currentSlide(5)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="container">
+      <h2>Отзывы клиентов</h2>
+      <div class="reviews-comment">80% заказчиков обращаются к нам повторно</div>
+      <div class="reviews-wrapper">
+        <div class="reviews-right" onclick="nextReview(1)">&#10095;</div>
+        <div class="reviews-left" onclick="nextReview(-1)">&#10094;</div>
+        <div class="reviews-item fade">
+          <div class="review-text">
+            <p>
+              Я был приятно удивлен качеством и профессионализмом, которые проявили сотрудники этой компании.
+            </p>
+            <p>
+              Первое, что мне понравилось, это то, что представитель компании провел осмотр дороги и предоставил мне подробную
+              консультацию о том, какие виды работ требуются для устранения проблем. Он также рассказал мне о разных опциях, которые
+              были доступны для ремонта дороги.
+            </p>
+            <p>
+              Когда мы решились на работу, сотрудники компании были очень профессиональны и организованны. Они пришли вовремя,
+              выполнили работы в оговоренные сроки и убрали за собой после окончания работ. Результаты были впечатляющими - дорога
+              выглядела так, как будто она только что была построена.
+            </p>
+            <p>
+              Я также оценил то, что сотрудники компании были очень дружелюбными и отзывчивыми на все мои вопросы и просьбы. Я
+              чувствовал, что они на самом деле заботятся о качестве своей работы и о том, чтобы я был доволен результатом.
+            </p>
+            <p>
+              В целом, я могу настоятельно рекомендовать эту компанию всем, кто ищет высококачественные услуги по ремонту дорог. Они
+              были профессиональными, дружелюбными и организованными, и я был очень доволен всем процессом сотрудничества с ними. Если
+              вам нужен ремонт дороги, обязательно обратитесь к этой компании.
+            </p>
+          </div>
+        </div>
+        <div class="reviews-item fade">
+          <div class="review-text">
+            <p>
+              Я бы хотел выразить свою искреннюю благодарность компании за ее профессионализм, добросовестность и эффективность в
+              работе по подготовке строительных площадок. Я очень доволен тем, как компания выполнила свою работу и рекомендую ее
+              всем, кто ищет качественную и надежную подготовку строительных площадок.
+            </p>
+            <p>
+              Первое, что мне понравилось в работе компании, - это ее высокий уровень профессионализма. Команда специалистов, которые
+              занимались подготовкой моей строительной площадки, была очень компетентна и имела богатый опыт в этой области. Они
+              быстро оценили мои потребности и предложили решения, которые наилучшим образом соответствовали моим требованиям. Все
+              этапы работы выполнялись в срок, что было очень важно для меня, так как у меня были строгие сроки по завершению проекта.
+            </p>
+            <p>
+              Кроме того, я оценил высокое качество работы компании. Они использовали только самое современное оборудование и
+              технологии, чтобы гарантировать максимальную точность и эффективность в работе. В результате, моя строительная площадка
+              была подготовлена в срок, и качество работы было выше моих ожиданий.
+            </p>
+            <p>
+              И, наконец, я хотел бы отметить отличный уровень обслуживания, который я получил от компании. Они всегда были на связи,
+              готовы ответить на все мои вопросы и удовлетворить все мои потребности. Весь процесс подготовки строительной площадки
+              был безупречным, и я чувствовал, что могу полностью доверять компании и ее команде.
+            </p>
+            <p>
+              В целом, я очень доволен работой этой компании по подготовке строительных площадок, и буду с удовольствием рекомендовать
+              ее своим друзьям и коллегам. Большое спасибо за вашу профессиональную и качественную работу!
+            </p>
+          </div>
+        </div>
+        <div class="reviews-item fade">
+          <div class="review-text">
+            <p>
+              Хочу поделиться своим положительным опытом работы с компанией, которая занимается благоустройством территории. Эта
+              компания - настоящий профессионал в своем деле.
+            </p>
+            <p>
+              С первого контакта с менеджером по продажам, я почувствовал, что эта компания нацелена на обеспечение высокого уровня
+              удовлетворения клиентов. Менеджер был очень вежливым и предупредительным, он ответил на все мои вопросы и дал мне
+              подробную информацию о том, какие услуги компания предоставляет и как она может помочь мне в моих потребностях.
+            </p>
+            <p>
+              После того, как мы оформили договор, я был приятно удивлен тем, насколько быстро и профессионально работала команда
+              специалистов. Они предоставили мне детальный план работ, и я мог наблюдать за процессом каждого этапа. Результаты были
+              просто потрясающими: территория была преобразована, и стала красивой и ухоженной.
+            </p>
+            <p>
+              Мне очень понравилось, как компания относилась к своей работе, как профессионально и качественно она выполняла свои
+              обязательства. Я чувствовал себя в безопасности, зная, что я работаю с настоящими экспертами в области благоустройства
+              территории. Я безусловно буду рекомендовать эту компанию своим друзьям и коллегам, и не стану искать других подрядчиков
+              в этой области в будущем.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-dots">
+        <div class="dot-item" onclick="currentReview(1)"></div>
+        <div class="dot-item" onclick="currentReview(2)"></div>
+        <div class="dot-item" onclick="currentReview(3)"></div>
+      </div>
+      <div class="reviews-comment">А ещё мы сотрудничаем с такими компаниями:</div>
+      <div class="reviews-cooperation">
+        <img src="/img/burger-king.png" alt="" width="auto" height="100px">
+        <img src="/img/dixi.png" alt="" width="auto" height="100px">
+      </div>
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="container">
+      <h2>Контакты</h2>
+      <div class="contacts-wrapper">
+        <div class="contacts-map"></div>
+        <div class="contacts-text">
+          <p>
+            Общество с ограниченной ответственностью «СХ-СТРОЙ ПЛЮС»
+          </p>
+          <p>
+            Юридический адрес: 121596, город Москва, вн.тер. г. Муниципальный Округ Можайский, ул Горбунова, дом 2, строение 3, помещение 1/10
+          </p>
+          <p>
+            Почтовый адрес: 143026, МО, Одинцовский р-н, Немчиновка 1, а/я 20
+          </p>
+          <p>
+            Электронный адрес: info@sh-stroj.ru
+          </p>
+          <p>
+            Контактный телефон: +7 (499) 992 78 75
+          </p>
+          <h3>Время работы</h3>
+          <p>
+            Пн-Пт: с 9:00 до 18:00
+          </p>
+          <p>
+            Сб-Вс: выходной
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="copyright">
+          &copy; 2023 Общество с ограниченной ответственностью «СХ-СТРОЙ ПЛЮС»
+        </div>
+        <div class="developer">
+          Сайт разработан ...
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

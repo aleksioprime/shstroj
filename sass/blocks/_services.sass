@@ -1,7 +1,131 @@
 .services
     // box-shadow: 0 0 8px 8px $text-color-alt
-    margin-top: -20px
+    margin-top: 40px
     padding: 10px
-    background-color: #fff
+    padding-bottom: 40px
+    background-color: #22211B
+    color: #fff
     h2
         text-align: center
+        text-transform: uppercase
+        font-size: 2em
+    h3
+        text-align: center
+        text-transform: uppercase
+        font-size: 1.5em
+        border-bottom: 1px solid #FEB129
+        padding: 30px 0 15px
+        margin: 0 20%
+    &-wrapper
+        position: relative
+        display: flex
+        overflow: hidden
+        justify-content: center
+        .service-right, .service-left
+            position: absolute
+            width: 50px
+            height: 100%
+            top: 0
+            cursor: pointer
+            transition: all 0.3s
+            z-index: 1
+        .service-right
+            right: -10px
+            background: url('../img/slide-right.png') no-repeat 50% 45% / 100%
+        .service-left
+            left: -10px
+            background: url('../img/slide-left.png') no-repeat 50% 45% / 100%
+    &-items
+        display: flex
+        justify-content: space-between
+        flex-wrap: nowrap
+        overflow-x: scroll
+        overflow-y: hidden
+        padding: 10px 5px
+        width: 90%
+        scroll-behavior: smooth
+        &::-webkit-scrollbar
+            width: 10px
+            height: 8px
+        &::-webkit-scrollbar-track
+            background-color: #22211B
+        &::-webkit-scrollbar-thumb
+            background-color: #FEB129
+            border-radius: 20px
+    &-content
+        display: flex
+        justify-content: center
+.services .card
+    flex: 1 0 30%
+    margin: 5px
+    position: relative
+    img
+        width: 100%
+    &-title
+        position: absolute
+        bottom: 0%
+        width: 100%
+        height: 40%
+        padding: 10px
+        text-align: center
+        font-size: 1.2em
+        text-transform: uppercase
+        z-index: 2
+        transition: bottom .5s ease
+        display: flex
+        align-items: center
+        justify-content: center
+        span
+            padding: 10px
+    &-overlay
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 40%
+        background: rgba(0, 0, 0, 0.5)
+        transition: height 0.5s ease
+    &-button
+        position: absolute
+        width: 100%
+        top: 65%
+        opacity: 0
+        transition: opacity .35s ease
+        text-align: center
+        z-index: 1
+        a
+            padding: 15px 40px
+            text-transform: uppercase
+            font-weight: bold
+            text-align: center
+            background: #FEB129
+            color: #22211B
+            border: 1px solid white 
+.card:hover
+    .card-overlay
+        height: 100%
+        display: block
+        background: rgba(0, 0, 0, 0.5)
+    .card-title
+        background: rgba(0, 0, 0, 0)
+        bottom: 50%
+        span
+            background: none
+    .card-button
+        opacity: 1
+.content
+    &-comment
+        font-size: 1.5em
+@media screen and (max-width: 900px)
+    .services .card
+        flex: 1 0 50%
+        &-title
+            font-size: 1.8em
+@media screen and (max-width: 600px)
+    .services .card
+        &-title
+            font-size: 2em
+    .services-wrapper
+        flex-wrap: wrap
+        max-height: 900px
+        overflow-y: auto
