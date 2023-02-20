@@ -10,20 +10,26 @@
         // background: url('../img/techno.png') no-repeat left bottom
         // background-size: 60% auto
         display: flex
-        align-items: flex-start
+        align-items: center
         padding: 10px
         width: 100%
         &-text
             margin-right: 10px
+
         &-photo
             margin-left: auto
-            min-width: 30%
+            margin-top: 1em
+            min-width: 40%
             height: 500px
             overflow: hidden
-            // border: 1px solid #22211B
-            box-shadow: 5px 5px rgba(#22211B,1)
+            // border: 3px solid #22211B
+            
+            // box-shadow: 5px 5px rgba(#22211B,1)
             video
                 width: 100%
+                object-fit: none
+    &-documents
+        padding: 10px
                 
 
 @media (max-width: 960px)
@@ -37,12 +43,17 @@
             background-color: rgba(#22211B, 0.5)
             color: white
         &-photo
-            min-width: 100%
+            width: 100%
             height: 100%
             box-shadow: none
+            video
+                object-fit: cover
 
 @media (max-width: 640px)
     .about-content
         flex-wrap: wrap
+        &-text
+            max-height: 100%
+            overflow: hidden
             
                 

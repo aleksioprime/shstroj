@@ -1,10 +1,8 @@
 function sRight(target) {
-    console.log(target.parentNode)
     target.parentNode.querySelector('.services-items').scrollLeft += 200;
 }
 
 function sLeft(target) {
-    console.log(target.parentNode)
     target.parentNode.querySelector('.services-items').scrollLeft -= 200;
 }
 
@@ -78,3 +76,24 @@ function showReview(n) {
         }
     })
 }
+
+document.querySelectorAll('a[href^="#"').forEach(link => {
+
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        let href = this.getAttribute('href').substring(1);
+
+        const scrollTarget = document.getElementById(href);
+
+        // const topOffset = document.querySelector('.scrollto').offsetHeight;
+        const topOffset = 0; // если не нужен отступ сверху 
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});

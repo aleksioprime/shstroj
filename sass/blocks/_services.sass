@@ -15,7 +15,7 @@
         font-size: 1.5em
         border-bottom: 1px solid #FEB129
         padding: 30px 0 15px
-        margin: 0 20%
+        margin: 0 30%
     &-wrapper
         position: relative
         display: flex
@@ -24,16 +24,18 @@
         .service-right, .service-left
             position: absolute
             width: 50px
-            height: 100%
-            top: 0
+            height: 50%
+            top: 25%
             cursor: pointer
             transition: all 0.3s
             z-index: 1
+            &:hover
+                transform: scale(1.2)
         .service-right
-            right: -10px
+            right: -5px
             background: url('../img/slide-right.png') no-repeat 50% 45% / 100%
         .service-left
-            left: -10px
+            left: -5px
             background: url('../img/slide-left.png') no-repeat 50% 45% / 100%
     &-items
         display: flex
@@ -121,11 +123,17 @@
         flex: 1 0 50%
         &-title
             font-size: 1.8em
-@media screen and (max-width: 600px)
+@media screen and (max-width: 700px)
     .services .card
         &-title
-            font-size: 2em
+            font-size: 1.2em
     .services-wrapper
         flex-wrap: wrap
         max-height: 900px
         overflow-y: auto
+        .service-right, .service-left
+            width: 30px
+        .service-right
+            right: -2px
+        .service-left
+            left: -2px

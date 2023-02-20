@@ -12,8 +12,11 @@
     &-slides
         .slide
             position: relative
-            // box-sizing: border-box
-            // border: 10px solid #22211B
+            box-sizing: border-box
+            border: 10px solid #22211B
+            background: #22211B
+            display: flex
+            justify-content: center
             &-text
                 position: absolute
                 display: flex
@@ -26,8 +29,10 @@
                 font-size: 1.2em
                 padding: 10px
             &-image
-                width: 100%
-                border-radius: 10px
+                max-height: 600px
+                max-width: 100%
+                transition: opacity 2s
+                // border-radius: 10px
             &-right, &-left
                 position: absolute
                 width: 50px
@@ -36,13 +41,13 @@
                 cursor: pointer
                 transition: all 0.3s
             &-right
-                right: 10px
-                background: url('../img/slide-right.png') no-repeat 50% 45% / 100%
+                right: 0px
+                background: url('../img/slide-right.png') no-repeat 50% 50% / 100%
                 &:hover
                     transform: scale(1.2) translateX(10px)
             &-left
-                left: 10px
-                background: url('../img/slide-left.png') no-repeat 50% 45% / 100%
+                left: 0px
+                background: url('../img/slide-left.png') no-repeat 50% 50% / 100%
                 &:hover
                     transform: scale(1.2) translateX(-10px)
     &-thumbnail
@@ -67,6 +72,8 @@
                 display: flex
                 img                 
                     transition: all 0.3s
+                    object-fit: cover
+                    width: 100%
                 img:hover
                     transform: scale(1.1)
             &-item:not(:last-of-type)
