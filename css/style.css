@@ -1,25 +1,4 @@
 @font-face {
-  font-family: "Proxima Nova Regular";
-  src: url("../fonts/ProximaNova-Regular.eot");
-  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Proxima Nova Light";
-  src: url("../fonts/ProximaNova-Light.eot");
-  src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Proxima Nova Semibold";
-  src: url("../fonts/ProximaNova-Semibold.eot");
-  src: url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "Finlandica";
   src: local("Finlandica Regular"), local("Finlandica-Regular"), url("../fonts/Finlandica-Regular.woff2") format("woff2"), url("../fonts/Finlandica-Regular.woff") format("woff"), url("../fonts/Finlandica-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -35,7 +14,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.wrapper {
   max-width: 1170px;
   margin: auto;
 }
@@ -619,9 +598,9 @@ body {
   padding: 10px;
 }
 .gallery-slides .slide-image {
-  max-height: 600px;
-  max-width: 100%;
-  transition: opacity 2s;
+  max-width: 80%;
+  animation-name: animateside;
+  animation-duration: 0.4s;
 }
 .gallery-slides .slide-right, .gallery-slides .slide-left {
   position: absolute;
@@ -692,6 +671,16 @@ body {
   }
   .gallery-thumbnail::-webkit-scrollbar {
     width: 10px;
+  }
+}
+@keyframes animateside {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .reviews {
@@ -823,4 +812,101 @@ footer .footer-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 15px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 10% auto;
+  border: 2px solid #888;
+  border-radius: 5px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.modal-content .form-group {
+  flex-grow: 1;
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: #22211B;
+  color: white;
+}
+.modal-header h2 {
+  margin: 10px 0;
+}
+.modal-body {
+  padding: 2px 16px 15px;
+}
+.modal-body .submit {
+  background-color: #22211B;
+  border: none;
+}
+.modal-body .form-captcha {
+  margin-bottom: 10px;
+}
+.modal-body .success-message {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body .success-message-text {
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: green;
+}
+.modal-body .success-message-btn {
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 1px solid #FEB129;
+}
+.modal-body .success-message-btn:hover {
+  background-color: #22211B;
+  color: white;
+}
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #22211B;
+  color: white;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

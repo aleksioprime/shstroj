@@ -29,9 +29,10 @@
                 font-size: 1.2em
                 padding: 10px
             &-image
-                max-height: 600px
-                max-width: 100%
-                transition: opacity 2s
+                max-width: 80%
+                animation-name: animateside
+                animation-duration: 0.4s
+                // transition: opacity 2s
                 // border-radius: 10px
             &-right, &-left
                 position: absolute
@@ -88,3 +89,11 @@
         height: 100px !important
     .gallery-thumbnail::-webkit-scrollbar
         width: 10px
+
+@keyframes animateside
+    from
+        transform: translateX(-50px)
+        opacity: 0
+    to
+        transform: translateX(0)
+        opacity: 1
