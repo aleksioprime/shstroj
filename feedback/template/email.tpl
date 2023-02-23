@@ -32,7 +32,7 @@
             </tr>
             <tr>
               <td bgcolor="#fff " style="padding: 20px 15px; color: #777; font-size: 14px;">
-                <p>&copy; 2022 Мой сайт.</p>
+                <p>&copy; 2023 СХ-Строй Плюс.</p>
               </td>
             </tr>
           </tbody>
