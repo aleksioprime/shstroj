@@ -203,12 +203,12 @@ body {
 }
 
 .slider {
-  background: url("../img/background.png") no-repeat center;
+  background: url("../img/background-photo.jpg") no-repeat center;
   background-size: cover;
   background-color: #22211B;
   padding-top: 30px;
   padding-bottom: 50px;
-  min-height: 600px;
+  min-height: 700px;
 }
 .slider-wrapper {
   display: flex;
@@ -225,7 +225,8 @@ body {
 .slider-title span {
   display: inline;
   background: rgba(34, 33, 27, 0.9);
-  line-height: 150%;
+  line-height: 200%;
+  padding: 8px;
 }
 .slider-text span {
   color: white;
@@ -264,33 +265,42 @@ body {
   margin-top: 40px;
   padding: 10px;
   padding-bottom: 40px;
-  background-color: #22211B;
-  color: #fff;
+  background-image: url("../img/services-bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .services h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
+  color: #22211B;
 }
 .services h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5em;
-  border-bottom: 1px solid #FEB129;
-  padding: 30px 0 15px;
-  margin: 0 30%;
+  color: #FEB129;
+  margin: 5px;
 }
 .services-wrapper {
+  margin: 10px;
   position: relative;
   display: flex;
   overflow: hidden;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #22211B;
+  color: #fff;
+  border-radius: 10px;
 }
 .services-wrapper .service-right, .services-wrapper .service-left {
   position: absolute;
   width: 50px;
   height: 50%;
-  top: 25%;
+  top: 30%;
   cursor: pointer;
   transition: all 0.3s;
   z-index: 1;
@@ -299,11 +309,11 @@ body {
   transform: scale(1.2);
 }
 .services-wrapper .service-right {
-  right: -5px;
+  right: 5px;
   background: url("../img/slide-right.png") no-repeat 50% 45%/100%;
 }
 .services-wrapper .service-left {
-  left: -5px;
+  left: 5px;
   background: url("../img/slide-left.png") no-repeat 50% 45%/100%;
 }
 .services-items {
@@ -411,12 +421,15 @@ body {
     flex: 1 0 50%;
   }
   .services .card-title {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
+  .services .card {
+    flex: 1 0 100%;
+  }
   .services .card-title {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .services-wrapper {
     flex-wrap: wrap;
@@ -436,12 +449,20 @@ body {
 .advantages {
   margin-top: -20px;
   padding: 10px;
-  background-color: #fff;
+}
+.advantages .wrapper {
+  margin-top: -120px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 8px 8px #22211B;
+  border-radius: 10px;
 }
 .advantages h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
+  color: #22211B;
+  padding: 0;
 }
 .advantages-wrapper {
   display: flex;
@@ -739,6 +760,9 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+  margin: 0 10px;
+  box-shadow: 0 0 3px 3px rgba(34, 33, 27, 0.6);
+  border-radius: 10px;
 }
 .reviews h2 {
   text-align: center;
@@ -766,7 +790,7 @@ body {
 .reviews-right, .reviews-left {
   position: absolute;
   width: auto;
-  top: 40%;
+  top: 45%;
   cursor: pointer;
   padding: 16px;
   font-weight: bold;
