@@ -326,93 +326,83 @@
     <div class="wrapper">
       <h2>Галерея наших работ</h2>
       <div class="gallery-wrapper">
-        <div class="gallery-slides">
+        <div class="gallery-modal">
           <div class="slide">
+            <div class="slide-close" onclick="closeSlide()"></div>
             <div class="slide-right" onclick="nextSlide(1)"></div>
             <div class="slide-left" onclick="nextSlide(-1)"></div>
-            <img src="img/gallery/photo-1-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-2-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-3-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-4-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-5-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-6-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-7-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-8-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-9-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-10-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-11-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-12-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-13-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-14-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-15-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-16-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-17-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-18-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-19-full.png" alt="" class="slide-image">
-            <img src="img/gallery/photo-20-full.png" alt="" class="slide-image">
+            <img src="" alt="" id="slide-image">
             <!-- <div class="slide-text">Описание фотографии</div> -->
           </div>
         </div>
         <div class="gallery-thumbnail">
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-1-thumbnail.png" alt="" onclick="currentSlide(1)">
+          <div class="gallery-thumbnail-column">
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-1.png" alt="Фотография №1">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-2.png" alt="Фотография №2">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-3.png" alt="Фотография №3">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-4.png" alt="Фотография №4">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-5.png" alt="Фотография №5">
+            </div>
           </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-2-thumbnail.png" alt="" onclick="currentSlide(2)">
+          <div class="gallery-thumbnail-column">
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-6.png" alt="Фотография №6">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-7.png" alt="Фотография №7">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-8.png" alt="Фотография №8">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-9.png" alt="Фотография №9">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-10.png" alt="Фотография №10">
+            </div>
           </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-3-thumbnail.png" alt="" onclick="currentSlide(3)">
+          <div class="gallery-thumbnail-column">
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-11.png" alt="Фотография №11">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-12.png" alt="Фотография №12">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-13.png" alt="Фотография №13">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-14.png" alt="Фотография №14">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-15.png" alt="Фотография №15">
+            </div>
           </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-4-thumbnail.png" alt="" onclick="currentSlide(4)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-5-thumbnail.png" alt="" onclick="currentSlide(5)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-6-thumbnail.png" alt="" onclick="currentSlide(6)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-7-thumbnail.png" alt="" onclick="currentSlide(7)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-8-thumbnail.png" alt="" onclick="currentSlide(8)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-9-thumbnail.png" alt="" onclick="currentSlide(9)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-10-thumbnail.png" alt="" onclick="currentSlide(10)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-11-thumbnail.png" alt="" onclick="currentSlide(11)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-12-thumbnail.png" alt="" onclick="currentSlide(12)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-13-thumbnail.png" alt="" onclick="currentSlide(13)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-14-thumbnail.png" alt="" onclick="currentSlide(14)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-15-thumbnail.png" alt="" onclick="currentSlide(15)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-16-thumbnail.png" alt="" onclick="currentSlide(16)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-17-thumbnail.png" alt="" onclick="currentSlide(17)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-18-thumbnail.png" alt="" onclick="currentSlide(18)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-19-thumbnail.png" alt="" onclick="currentSlide(19)">
-          </div>
-          <div class="thumbnail-item">
-            <img src="img/gallery/photo-20-thumbnail.png" alt="" onclick="currentSlide(20)">
+          <div class="gallery-thumbnail-column">
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-16.png" alt="Фотография №16">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-17.png" alt="Фотография №17">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-18.png" alt="Фотография №18">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-19.png" alt="Фотография №19">
+            </div>
+            <div class="thumbnail-item">
+              <img src="img/gallery/thumb/photo-20.png" alt="Фотография №20">
+            </div>
           </div>
         </div>
       </div>
@@ -512,8 +502,8 @@
       </div>
       <div class="reviews-comment">Также мы сотрудничаем с такими компаниями:</div>
       <div class="reviews-cooperation">
-        <img src="img/burger-king.png" alt="" width="auto" height="100px">
-        <img src="img/dixi.png" alt="" width="auto" height="100px">
+        <img src="img/logos/burger-king.png" alt="" width="auto" height="100px">
+        <img src="img/logos/dixi.png" alt="" width="auto" height="100px">
       </div>
     </div>
   </section>
@@ -555,9 +545,9 @@
         <div class="copyright">
           &copy; 2015-2023 Общество с ограниченной ответственностью «СХ-СТРОЙ ПЛЮС»
         </div>
-        <div class="developer">
+        <!-- <div class="developer">
           Сайт разработан ...
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
@@ -630,15 +620,13 @@
           <button class="success-message-btn">Закрыть</button>
         </div>
       </div>
-      <!-- <div class="modal-footer">
-        <h3>Modal Footer</h3>
-      </div> -->
     </div>
   </div>
   <script src="https://unpkg.com/imask"></script>
   <script src="/feedback/js/form-processing.js"></script>
   <script src="js/main.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/gallery.js"></script>
   <script type="text/javascript" src="https://spikmi.org/Widget?id=16286"></script>
 </body>
 

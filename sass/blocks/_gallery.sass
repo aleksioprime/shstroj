@@ -1,6 +1,6 @@
 .gallery
-    // box-shadow: 0 0 8px 8px $text-color-alt
-    padding: 10px
+    padding-top: 10px
+    padding-bottom: 30px
     background-color: #FEB129
     h2
         text-align: center
@@ -9,91 +9,99 @@
     &-wrapper
         display: flex
         flex-direction: column
-    &-slides
-        .slide
-            position: relative
-            box-sizing: border-box
-            border: 10px solid #22211B
-            background: #22211B
-            display: flex
-            justify-content: center
-            &-text
-                position: absolute
-                display: flex
-                align-items: center
-                justify-content: center
-                width: 100%
-                bottom: 0
-                background: rgba(#22211B, 0.9)
-                color: #fff
-                font-size: 1.2em
-                padding: 10px
-            &-image
-                max-width: 80%
-                animation-name: animateside
-                animation-duration: 0.4s
-                // transition: opacity 2s
-                // border-radius: 10px
-            &-right, &-left
-                position: absolute
-                width: 50px
-                height: 100%
-                top: 0
-                cursor: pointer
-                transition: all 0.3s
-            &-right
-                right: 0px
-                background: url('../img/slide-right.png') no-repeat 50% 50% / 100%
-                &:hover
-                    transform: scale(1.2) translateX(10px)
-            &-left
-                left: 0px
-                background: url('../img/slide-left.png') no-repeat 50% 50% / 100%
-                &:hover
-                    transform: scale(1.2) translateX(-10px)
-    &-thumbnail
-        display: flex
-        flex-wrap: nowrap
-        overflow-x: auto
-        margin: 10px 0
+        max-height: 800px
+        overflow-y: scroll
+        padding: 0 10px
         &::-webkit-scrollbar
-            width: 12px
+            width: 15px
         &::-webkit-scrollbar-track
             background-color: #FEB129
         &::-webkit-scrollbar-thumb
             background-color: #22211B
             border-radius: 20px
-        .thumbnail
-            &-item
-                margin-bottom: 10px
+    &-modal
+        display: none
+        position: fixed
+        z-index: 1
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: rgba(0,0,0,0.5)
+        .slide
+            position: fixed
+            left: 50%
+            top: 50%
+            width: 80%
+            max-width: 800px
+            height: auto
+            max-height: 80%
+            transform: translateX(-50%) translateY(-50%)
+            z-index: 3
+            animation: fade 0.5s
+            img 
+                width: 100%
+                height: 100%
+                object-fit: cover
+            &-right, &-left
+                position: absolute
+                width: 50px
+                height: 80%
+                top: 10%
                 cursor: pointer
-                overflow: hidden
-                flex: 1 0 25%
-                height: 200px
-                display: flex
-                img                 
-                    transition: all 0.3s
-                    object-fit: cover
-                    width: 100%
-                img:hover
-                    transform: scale(1.1)
-            &-item:not(:last-of-type)
-                margin-right: 10px
-        .active
-            border: 2px solid #22211B
-                
+                transition: all 0.3s
+            &-right
+                right: -50px
+                background: url('../img/icons/slide-right.png') no-repeat 50% 50% / 100%
+                &:hover
+                    transform: scale(1.2) translateX(10px)
+            &-left
+                left: -50px
+                background: url('../img/icons/slide-left.png') no-repeat 50% 50% / 100%
+                &:hover
+                    transform: scale(1.2) translateX(-10px)
+            &-close
+                position: absolute
+                width: 30px
+                height: 30px
+                top: -40px
+                right: -40px
+                cursor: pointer
+                background: url('../img/icons/slide-close.png') no-repeat 50%
+                background-size: 100%
+                transition: all 0.3s
+                &:hover
+                    transform: rotate(360deg)
+    &-thumbnail
+        display: flex
+        flex-wrap: wrap
+        &-column
+            flex: 1 0 20%
+            -ms-flex: 20%
+            padding: 0 4px
+            .thumbnail
+                &-item
+                    margin-bottom: 10px
+                    cursor: pointer
+                    overflow: hidden
+                    display: flex
+                    img                 
+                        transition: all 0.3s
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                    img:hover
+                        transform: scale(1.1)
 
-@media (max-width: 640px)
-    .thumbnail-item
-        flex: 1 0 20%
-        height: 100px !important
-    .gallery-thumbnail::-webkit-scrollbar
-        width: 10px
+@media screen and (max-width: 800px)
+  .gallery-thumbnail-column
+    -ms-flex: 50%
+    flex: 50%
+    max-width: 50%
 
-@keyframes animateside
-    from
-        transform: translateX(-50px)
-        opacity: 0
-    to
-        transform: translateX(0)
-        opacity: 1
+@media screen and (max-width: 600px)
+  .gallery-thumbnail-column
+    -ms-flex: 100%
+    flex: 100%
+    max-width: 100%

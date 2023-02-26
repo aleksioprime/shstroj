@@ -10,38 +10,38 @@ function showMenu() {
     document.getElementById("menu").classList.toggle("responsive");
 }
 
-let slideIndex = 1
-showSlide(slideIndex);
+// let slideIndex = 1
+// showSlide(slideIndex);
 
-function nextSlide(n) {
-    showSlide(slideIndex += n);
-}
+// function nextSlide(n) {
+//     showSlide(slideIndex += n);
+// }
 
-function currentSlide(n) {
-    showSlide(slideIndex = n);
-}
+// function currentSlide(n) {
+//     showSlide(slideIndex = n);
+// }
 
-function showSlide(n) {
-    let slides = document.querySelectorAll(".slide-image");
-    let thumbnails = document.querySelectorAll(".thumbnail-item");
-    if (n > slides.length - 1) {slideIndex = 1};
-    if (n < 1) {slideIndex = slides.length - 1};
-    slides.forEach((item, index) => {
-        if (index == slideIndex-1) {
-            item.style.display = "block"
-        } else {
-            item.style.display = "none"
-        }
-    });
-    thumbnails.forEach((item, index) => {
-        if (index == slideIndex-1) {
-            item.classList.add("active")
-            item.scroll()
-        } else {
-            item.classList.remove("active")
-        }
-    })
-}
+// function showSlide(n) {
+//     let slides = document.querySelectorAll(".slide-image");
+//     let thumbnails = document.querySelectorAll(".thumbnail-item");
+//     if (n > slides.length - 1) {slideIndex = 1};
+//     if (n < 1) {slideIndex = slides.length - 1};
+//     slides.forEach((item, index) => {
+//         if (index == slideIndex-1) {
+//             item.style.display = "block"
+//         } else {
+//             item.style.display = "none"
+//         }
+//     });
+//     thumbnails.forEach((item, index) => {
+//         if (index == slideIndex-1) {
+//             item.classList.add("active")
+//             item.scroll()
+//         } else {
+//             item.classList.remove("active")
+//         }
+//     })
+// }
 
 
 let reviewIndex = 1
