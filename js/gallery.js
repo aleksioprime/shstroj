@@ -6,7 +6,6 @@ let activeImageNumber = 0
 
 function displayImage(e, index) {
     let src = e.target.src.split('/').filter(item => item !== 'thumb').join('/')
-    console.log(index);
     activeGalleryImage.src = src;
     modalGallery.style.display = 'block';
     activeImageNumber = index;
