@@ -323,13 +323,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.services h2 {
+.services h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
   color: #22211B;
+  font-weight: bold;
+  padding: 10px;
 }
-.services h3 {
+.services h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -509,12 +511,13 @@ body {
   box-shadow: 0 0 3px 3px rgba(34, 33, 27, 0.6);
   border-radius: 10px;
 }
-.advantages h2 {
+.advantages h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
   color: #22211B;
-  padding: 0;
+  padding: 10px;
+  font-weight: bold;
 }
 .advantages-wrapper {
   display: flex;
@@ -573,20 +576,22 @@ body {
   }
 }
 .about {
-  font-size: 1.4em;
   padding-bottom: 30px;
+  margin-top: 40px;
 }
-.about h2 {
+.about h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
-  margin: 30px 0 0;
+  font-weight: bold;
+  padding-bottom: 0;
 }
 .about-content {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0 10px;
   width: 100%;
+  font-size: 1.4em;
 }
 .about-content-text {
   margin-right: 10px;
@@ -604,6 +609,7 @@ body {
 }
 .about-documents {
   padding: 10px;
+  font-size: 1.4em;
 }
 .about-documents .documents-wrapper {
   display: flex;
@@ -676,19 +682,20 @@ body {
   }
 }
 .gallery {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 30px;
   background-color: #FEB129;
 }
-.gallery h2 {
+.gallery h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
+  font-weight: bold;
 }
 .gallery-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
+  padding: 10px;
 }
 .gallery-modal {
   display: none;
@@ -800,6 +807,7 @@ body {
 }
 .reviews {
   padding: 10px;
+  margin-top: 40px;
   margin-bottom: 30px;
   background-color: #fff;
 }
@@ -816,10 +824,12 @@ body {
   margin: 0 10px;
   border-radius: 10px;
 }
-.reviews h2 {
+.reviews h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 .reviews-dots {
   display: flex;
@@ -902,6 +912,15 @@ body {
   height: 100px;
   margin: 10px 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .reviews-right {
+    right: -10px;
+  }
+  .reviews-left {
+    left: -10px;
+  }
+}
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -912,20 +931,23 @@ body {
 }
 .contacts {
   padding: 10px;
+  padding-top: 40px;
   background: rgba(34, 33, 27, 0.9);
   color: #ffffff;
 }
-.contacts h2 {
+.contacts h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 0;
 }
 .contacts-wrapper {
   display: flex;
   justify-content: space-between;
 }
 .contacts-text {
-  padding: 15px;
+  padding: 0 15px;
   font-size: 1.4em;
 }
 
@@ -975,7 +997,7 @@ footer .footer-wrapper {
   background-color: #22211B;
   color: white;
 }
-.modal-header h2 {
+.modal-header h1 {
   margin: 10px 0;
 }
 .modal-body {
