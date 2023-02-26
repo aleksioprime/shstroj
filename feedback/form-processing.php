@@ -32,12 +32,12 @@ const HAS_SEND_EMAIL = true;
 // добавить ли прикреплённые файлы в тело письма в виде ссылок
 const HAS_ATTACH_IN_BODY = true;
 const EMAIL_SETTINGS = [
-  'addresses' => ['alex-x25@yandex.ru'], // кому необходимо отправить письмо
-  'from' => ['alex-x25@yandex.ru', 'СХ-Строй Плюс'], // от какого email и имени необходимо отправить письмо
+  'addresses' => ['info@sh-stroj.ru'], // кому необходимо отправить письмо
+  'from' => ['info@sh-stroj.ru', 'СХ-Строй Плюс'], // от какого email и имени необходимо отправить письмо
   'subject' => 'Сообщение с формы обратной связи', // тема письма
-  'host' => 'ssl://smtp.yandex.ru', // SMTP-хост
-  'username' => 'alex-x25@yandex.ru', // SMTP-пользователь
-  'password' => 'ybhbpjghhiyqagpf', // SMTP-пароль
+  'host' => 'ssl://smtp.mail.ru', // SMTP-хост
+  'username' => 'info@sh-stroj.ru', // SMTP-пользователь
+  'password' => 'TmGGis0ywCxbBdsipeP6', // SMTP-пароль
   'port' => '465' // SMTP-порт
 ];
 const HAS_SEND_NOTIFICATION = false;

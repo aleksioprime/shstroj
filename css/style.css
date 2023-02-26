@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Finlandica";
   src: local("Finlandica Regular"), local("Finlandica-Regular"), url("../fonts/Finlandica-Regular.woff2") format("woff2"), url("../fonts/Finlandica-Regular.woff") format("woff"), url("../fonts/Finlandica-Regular.ttf") format("truetype");
@@ -687,19 +688,7 @@ body {
 .gallery-wrapper {
   display: flex;
   flex-direction: column;
-  max-height: 800px;
-  overflow-y: scroll;
   padding: 0 10px;
-}
-.gallery-wrapper::-webkit-scrollbar {
-  width: 15px;
-}
-.gallery-wrapper::-webkit-scrollbar-track {
-  background-color: #FEB129;
-}
-.gallery-wrapper::-webkit-scrollbar-thumb {
-  background-color: #22211B;
-  border-radius: 20px;
 }
 .gallery-modal {
   display: none;
@@ -771,11 +760,14 @@ body {
   flex-wrap: wrap;
 }
 .gallery-thumbnail-column {
+  display: flex;
+  flex-wrap: wrap;
   flex: 1 0 20%;
   -ms-flex: 20%;
   padding: 0 4px;
 }
 .gallery-thumbnail-column .thumbnail-item {
+  width: 100%;
   margin-bottom: 10px;
   cursor: pointer;
   overflow: hidden;
@@ -794,13 +786,15 @@ body {
 
 @media screen and (max-width: 800px) {
   .gallery-thumbnail-column {
-    flex: 50%;
+    -ms-flex: 50%;
+    flex-basis: 50%;
     max-width: 50%;
   }
 }
 @media screen and (max-width: 600px) {
   .gallery-thumbnail-column {
-    flex: 100%;
+    -ms-flex: 100%;
+    flex-basis: 100%;
     max-width: 100%;
   }
 }
@@ -811,7 +805,6 @@ body {
 }
 .reviews-comment {
   display: block;
-  margin-bottom: 20px;
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
@@ -821,7 +814,6 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 10px;
-  box-shadow: 0 0 3px 3px rgba(34, 33, 27, 0.6);
   border-radius: 10px;
 }
 .reviews h2 {
@@ -875,10 +867,25 @@ body {
 }
 .reviews-item {
   display: none;
-  width: 80%;
+  width: 90%;
 }
-.reviews-item .review-text {
+.reviews-item blockquote {
   font-size: 1.4em;
+  margin: 0;
+  color: #231E28;
+  padding: 30px 30px 30px 30px;
+  border-left: 8px solid #22211B;
+  position: relative;
+  background: #FAF8EB;
+}
+.reviews-item blockquote:before {
+  content: "“";
+  font-family: Arial;
+  color: #22211B;
+  font-size: 70px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
 }
 .reviews-item.fade {
   -webkit-animation-name: fade;

@@ -43,6 +43,8 @@ function showReview(n) {
     })
 }
 
+setInterval(() => { nextReview(1) }, 15000);
+
 document.querySelectorAll('a[href^="#"').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();

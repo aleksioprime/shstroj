@@ -5,7 +5,7 @@
     background-color: #fff
     &-comment
         display: block
-        margin-bottom: 20px 
+        // margin-bottom: 20px 
         text-align: center
         font-size: 1.5em
         font-weight: bold
@@ -14,7 +14,7 @@
         display: flex
         justify-content: center
         margin: 0 10px
-        box-shadow: 0 0 3px 3px rgba(#22211B, 0.6)
+        // box-shadow: 0 0 3px 3px rgba(#22211B, 0.6)
         border-radius: 10px
     h2
         text-align: center
@@ -58,9 +58,23 @@
             background-color: rgba(0,0,0,0.8)
     &-item
         display: none
-        width: 80%
-        .review-text
+        width: 90%
+        blockquote 
             font-size: 1.4em
+            margin: 0
+            color: #231E28
+            padding: 30px 30px 30px 30px
+            border-left: 8px solid #22211B
+            position: relative
+            background: #FAF8EB
+            &:before
+                content: "\201C"
+                font-family: Arial
+                color: #22211B
+                font-size: 70px
+                position: absolute
+                left: 15px
+                top: 5px
         &.fade
             -webkit-animation-name: fade
             -webkit-animation-duration: 1.5s
