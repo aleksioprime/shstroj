@@ -34,7 +34,7 @@
             position: fixed
             left: 50%
             top: 50%
-            width: 80%
+            width: 95%
             max-width: 800px
             height: auto
             max-height: 80%
@@ -47,33 +47,33 @@
                 object-fit: cover
             &-right, &-left
                 position: absolute
-                width: 50px
-                height: 80%
-                top: 10%
+                width: 30px
+                top: 50%
+                height: 30px
                 cursor: pointer
                 transition: all 0.3s
             &-right
-                right: -50px
+                right: 10px
                 background: url('../img/icons/slide-right.png') no-repeat 50% 50% / 100%
                 &:hover
                     transform: scale(1.2) translateX(10px)
             &-left
-                left: -50px
+                left: 10px
                 background: url('../img/icons/slide-left.png') no-repeat 50% 50% / 100%
                 &:hover
                     transform: scale(1.2) translateX(-10px)
             &-close
                 position: absolute
-                width: 30px
-                height: 30px
-                top: -40px
-                right: -40px
+                width: 20px
+                height: 20px
+                top: 20px
+                right: 20px
                 cursor: pointer
                 background: url('../img/icons/slide-close.png') no-repeat 50%
                 background-size: 100%
                 transition: all 0.3s
                 &:hover
-                    transform: rotate(360deg)
+                    transform: rotate(180deg)
     &-thumbnail
         display: flex
         flex-wrap: wrap

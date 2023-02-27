@@ -712,7 +712,7 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 80%;
+  width: 95%;
   max-width: 800px;
   height: auto;
   max-height: 80%;
@@ -728,21 +728,21 @@ body {
 }
 .gallery-modal .slide-right, .gallery-modal .slide-left {
   position: absolute;
-  width: 50px;
-  height: 80%;
-  top: 10%;
+  width: 30px;
+  top: 50%;
+  height: 30px;
   cursor: pointer;
   transition: all 0.3s;
 }
 .gallery-modal .slide-right {
-  right: -50px;
+  right: 10px;
   background: url("../img/icons/slide-right.png") no-repeat 50% 50%/100%;
 }
 .gallery-modal .slide-right:hover {
   transform: scale(1.2) translateX(10px);
 }
 .gallery-modal .slide-left {
-  left: -50px;
+  left: 10px;
   background: url("../img/icons/slide-left.png") no-repeat 50% 50%/100%;
 }
 .gallery-modal .slide-left:hover {
@@ -750,17 +750,17 @@ body {
 }
 .gallery-modal .slide-close {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -40px;
-  right: -40px;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
   background: url("../img/icons/slide-close.png") no-repeat 50%;
   background-size: 100%;
   transition: all 0.3s;
 }
 .gallery-modal .slide-close:hover {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
 }
 .gallery-thumbnail {
   display: flex;
@@ -913,12 +913,17 @@ body {
   margin: 10px 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .reviews-right {
     right: -10px;
+    display: none;
   }
   .reviews-left {
     left: -10px;
+    display: none;
+  }
+  .reviews-item blockquote {
+    font-size: 1.2em;
   }
 }
 @keyframes fade {

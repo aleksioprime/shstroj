@@ -28,6 +28,9 @@ function closeSlide() {
     modalGallery.style.display = 'none';
 }
 
+closeIcon.addEventListener('click', closeSlide);
+// modalGallery.addEventListener('click', closeSlide);
+
 document.onkeydown = function(e) {
     switch (e.key) {
         case "ArrowLeft":
@@ -41,5 +44,3 @@ document.onkeydown = function(e) {
             break;
     }
 };
-
-closeIcon.addEventListener('click', closeSlide);
